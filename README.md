@@ -127,8 +127,8 @@ são **alvos de projeto**, não resultados observados.
 
 | Recurso | Endereço |
 |---|---|
-| **Protótipo (demonstração)** | `<INSERIR-LINK>` — publicar conforme [`docs/tutorial-postagem.md`](docs/tutorial-postagem.md) |
-| **Wiki do projeto** | `<INSERIR-LINK>` — `https://github.com/<organizacao>/<repositorio>/wiki` |
+| **Protótipo (demonstração)** | `<INSERIR-LINK>` |
+| **Wiki do projeto** | `<[INSERIR-LINK](https://github.com/viniciussantana001/HandMade/wiki)>` |
 | Código do protótipo | [`prototipo/`](prototipo/) |
 | Documentação escrita | [`documentos/`](documentos/) |
 | Conteúdo da Wiki (fonte) | [`documentos/wiki/`](documentos/wiki/) |
@@ -178,14 +178,6 @@ docs/
   tutorial-postagem.md        Como cada integrante publica sua parte
   matriz-responsabilidades.md Quem faz o quê, com escopo e apresentação
   fluxo-github.md             Issues, branches, commits e pull requests
-```
-
-## Contribuição da equipe
-
-Cada integrante edita **apenas a sua pasta**, abre o próprio *pull request* e apresenta a parte
-que efetivamente produziu. O procedimento completo — onde editar, como versionar, como atualizar
-a Wiki e como conferir antes de enviar — está em
-[`docs/tutorial-postagem.md`](docs/tutorial-postagem.md).
 
 ---
 
