@@ -128,7 +128,7 @@ são **alvos de projeto**, não resultados observados.
 | Recurso | Endereço |
 |---|---|
 | **Protótipo (demonstração)** | `<INSERIR-LINK>` |
-| **Wiki do projeto** | `<[INSERIR-LINK](https://github.com/viniciussantana001/HandMade/wiki)>` |
+| **Wiki do projeto** | `https://github.com/viniciussantana001/HandMade/wiki` |
 | Código do protótipo | [`prototipo/`](prototipo/) |
 | Documentação escrita | [`documentos/`](documentos/) |
 | Conteúdo da Wiki (fonte) | [`documentos/wiki/`](documentos/wiki/) |
