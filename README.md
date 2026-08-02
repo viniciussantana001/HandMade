@@ -133,9 +133,6 @@ são **alvos de projeto**, não resultados observados.
 | Documentação escrita | [`documentos/`](documentos/) |
 | Conteúdo da Wiki (fonte) | [`documentos/wiki/`](documentos/wiki/) |
 
-> Os dois links marcados com `<INSERIR-LINK>` devem ser preenchidos após a publicação. O
-> procedimento está descrito no tutorial de postagem.
-
 ## Como rodar o protótipo
 
 Requisitos: Node.js 20 ou superior.
