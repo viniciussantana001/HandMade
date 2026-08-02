@@ -127,7 +127,7 @@ são **alvos de projeto**, não resultados observados.
 
 | Recurso | Endereço |
 |---|---|
-| **Protótipo (demonstração)** | [Protótipo](handmade-b0f.pages.dev) |
+| **Protótipo (demonstração)** | [Protótipo](https://handmade-b0f.pages.dev/) |
 | **Wiki do projeto** | [Acessar Wiki](https://github.com/viniciussantana001/HandMade/wiki) |
 | Código do protótipo | [`prototipo/`](prototipo/) |
 | Documentação escrita | [`documentos/`](documentos/) |
