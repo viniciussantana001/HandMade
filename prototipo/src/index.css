@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    /*
+      U5 — paleta resolvida por cálculo, não por olho.
+
+      As luminosidades abaixo saíram de `work/paleta.mjs`, que resolve a menor
+      alteração de L capaz de satisfazer a WCAG 2.2 em todas as combinações que
+      o código realmente usa: texto sobre card, background e muted, e texto
+      sobre o tingimento do próprio matiz (/5, /10 e /20). Matiz e saturação de
+      marca ficaram intactos — só o brilho mudou.
+    */
+    --primary: 152 55% 28%;
+    --primary-foreground: 0 0% 100%;
+    /*
+      Segunda parada dos painéis com gradiente. Antes eles usavam
+      `to-primary/80`: a transparência compunha o verde com o branco do cartão
+      e CLAREAVA o fundo, derrubando o texto branco para 3,99:1. Aqui a parada
+      é opaca e mais escura — o degradê continua, mas ganhando profundidade.
+    */
+    --primary-deep: 152 60% 21%;
+    --secondary: 220 14% 94%;
+    --secondary-foreground: 220 20% 20%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 10% 44%;
+    /*
+      `accent` é a superfície de passagem do mouse dos componentes shadcn
+      (`hover:bg-accent hover:text-accent-foreground`, 33 usos em
+      components/ui). Na 4.0 estava âmbar com texto branco: 2,14:1 e um pisca
+      alaranjado em todo botão fantasma. Volta a ser a superfície discreta que
+      a convenção prevê. O âmbar da marca continua em `warning`.
+    */
+    --accent: 220 14% 94%;
+    --accent-foreground: 220 20% 20%;
+    --destructive: 0 72% 42.5%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 152 55% 28%;
+    --radius: 0.75rem;
+
+    --success: 152 55% 28%;
+    --success-foreground: 0 0% 100%;
+    /*
+      O âmbar tem dois papéis que uma só cor não cobre: preenchimento vivo do
+      crachá "Destaque" e cor de texto legível. `warning` continua vivo para o
+      preenchimento; `warning-strong` é a versão escura usada como texto.
+    */
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 90% 12%;
+    --warning-strong: 38 90% 30.5%;
+    --info: 210 80% 38.5%;
+    --info-foreground: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 152 55% 34%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 94%;
+    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-border: 220 13% 90%;
+    --sidebar-ring: 152 55% 34%;
+  }
+
+  .dark {
+    --background: 222 20% 7%;
+    --foreground: 210 20% 92%;
+    --card: 222 18% 11%;
+    --card-foreground: 210 20% 92%;
+    --popover: 222 18% 11%;
+    --popover-foreground: 210 20% 92%;
+    /* Mesmo cálculo do tema claro, invertido: no escuro as cores clareiam. */
+    --primary: 152 55% 44.5%;
+    --primary-foreground: 152 90% 12%;
+    /* No escuro o texto do painel é escuro, então a parada profunda clareia. */
+    --primary-deep: 152 55% 50%;
+    --secondary: 220 14% 16%;
+    --secondary-foreground: 210 14% 80%;
+    --muted: 220 14% 16%;
+    --muted-foreground: 220 10% 57%;
+    --accent: 220 14% 18%;
+    --accent-foreground: 210 14% 88%;
+    --destructive: 0 72% 69.5%;
+    --destructive-foreground: 0 90% 12%;
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 152 55% 44.5%;
+
+    --success: 152 55% 44.5%;
+    --success-foreground: 152 90% 12%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 90% 12%;
+    /* No escuro o âmbar vivo já contrasta com o fundo: texto e crachá coincidem. */
+    --warning-strong: 38 92% 50%;
+    --info: 210 80% 62.5%;
+    --info-foreground: 210 90% 12%;
+
+    --sidebar-background: 222 20% 7%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 152 55% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 16%;
+    --sidebar-accent-foreground: 210 14% 80%;
+    --sidebar-border: 220 13% 18%;
+    --sidebar-ring: 152 55% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    /* Evita o zoom involuntário de duplo toque e o realce cinza do iOS. */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    /* Impede o "efeito elástico" da rolagem arrastar a página inteira. */
+    overscroll-behavior-y: none;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700;
+    /* Títulos curtos ficam mais compactos e legíveis com o tracking negativo. */
+    letter-spacing: -0.018em;
+    text-wrap: balance;
+  }
+
+  /*
+    U5 — foco visível padronizado.
+
+    Só aparece na navegação por teclado (:focus-visible), nunca no toque. Sem
+    esta regra, os <button> nativos das telas ficavam sem indicação de foco,
+    o que reprova no critério 2.4.7 da WCAG.
+  */
+  :where(a, button, [role='button'], input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: calc(var(--radius) - 4px);
+  }
+
+  /*
+    U5 — respeito a "reduzir movimento" do sistema operacional.
+
+    As animações de entrada e as micro-interações são desligadas para quem
+    marcou a preferência, atendendo ao critério 2.3.3 da WCAG.
+  */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /*
+    U5 — áreas seguras.
+
+    A 4.0 já usava a classe `safe-area-bottom`, mas ela nunca foi definida:
+    era uma classe morta, e a barra inferior ficava sob o indicador de gestos
+    dos aparelhos com tela sem moldura. Aqui a reserva passa a ser real.
+  */
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  /* Espaço livre no fim do conteúdo: barra fixa (4rem) + área segura. */
+  .pb-safe-nav {
+    padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+  }
+}

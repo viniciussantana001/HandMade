@@ -1,0 +1,605 @@
+import {
+  boostStore,
+  consentStore,
+  favoriteStore,
+  listingStore,
+  messageStore,
+  notificationStore,
+  orderStore,
+  paymentStore,
+  reviewStore,
+  userStore,
+  STORAGE_PREFIX,
+} from './store';
+import { CURRENT_PRIVACY_VERSION, CURRENT_TERMS_VERSION } from './legal';
+import type { Listing, Message, User } from './types';
+
+/**
+ * Dados de demonstração da versão 5.0.
+ *
+ * A chave de semeadura mudou para `seeded_v50` porque o modelo de dados foi
+ * reescrito: a carteira (transações e saques) deixou de existir e no lugar dela
+ * entraram pagamentos diretos com recibo, compras de impulsionamento e
+ * registros de consentimento (LGPD).
+ */
+const SEED_KEY = `${STORAGE_PREFIX}seeded_v50b`;
+const CREDENTIALS_KEY = `${STORAGE_PREFIX}auth_credentials`;
+
+export function seedIfEmpty() {
+  if (localStorage.getItem(SEED_KEY)) return;
+
+  const existing = listingStore.list();
+  if (existing.length > 0) {
+    localStorage.setItem(SEED_KEY, '1');
+    return;
+  }
+
+  const sampleListings: Array<Omit<Listing, 'id'> & { id: string }> = [
+    {
+      id: 'wood-001',
+      title: 'Tábuas de pinus usadas 2 metros - lote com 30 unidades',
+      description: 'Lote de 30 tábuas de pinus, medindo 2m x 10cm x 2cm. Retiradas de uma reforma residencial. Estão em bom estado, com pouco uso. Ideais para projetos de marcenaria, pallets ou decoração rústica. Preço do lote completo.',
+      category: 'madeira',
+      condition: 'used_good',
+      price: 250,
+      quantity: '30',
+      unit: 'units',
+      location: 'São Paulo, SP',
+      images: [
+        '/materiais/madeira-tabuas-capa-640w.jpg',
+        '/materiais/madeira-tabuas-2-640w.jpg',
+      ],
+      listing_type: 'sale',
+      delivery_options: ['pickup', 'delivery_paid'],
+      seller_name: 'Carlos Madeira',
+      seller_email: 'carlos@demo.com',
+      created_by: 'carlos@demo.com',
+      status: 'active',
+      views: 142,
+      contacts: 8,
+      is_boosted: true,
+      boost_until: new Date(Date.now() + 7 * 86400000).toISOString(),
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 2 * 86400000).toISOString(),
+    },
+    {
+      id: 'electric-001',
+      title: 'Cabos de cobre 10mm - sobra de obra industrial',
+      description: 'Aproximadamente 200 metros de cabo de cobre 10mm², sobra de instalação industrial. Cabos novos, nunca utilizados, ainda em bobina. Ótimo para eletricistas e instalações elétricas.',
+      category: 'eletrico',
+      condition: 'new',
+      price: 1800,
+      quantity: '200',
+      unit: 'm',
+      location: 'Campinas, SP',
+      images: ['/materiais/eletrico-cabos-640w.jpg'],
+      listing_type: 'sale',
+      delivery_options: ['pickup', 'mail'],
+      seller_name: 'Eletro Materiais',
+      seller_email: 'eletro@demo.com',
+      created_by: 'eletro@demo.com',
+      status: 'active',
+      views: 89,
+      contacts: 5,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 86400000).toISOString(),
+    },
+    {
+      id: 'construction-001',
+      title: 'Tijolos maciços reaproveitados - 500 unidades',
+      description: 'Tijolos maciços retirados de demolição controlada. Todos inteiros, sem trincas. Perfeitos para projetos de construção sustentável, muros de jardim ou decoração. Preço por unidade. Desconto para lote completo.',
+      category: 'construcao',
+      condition: 'used_good',
+      price: 0.8,
+      quantity: '500',
+      unit: 'units',
+      location: 'Curitiba, PR',
+      images: ['/materiais/construcao-tijolos-640w.jpg'],
+      listing_type: 'sale',
+      delivery_options: ['pickup'],
+      seller_name: 'Demolições PR',
+      seller_email: 'demo@demo.com',
+      created_by: 'demo@demo.com',
+      status: 'active',
+      views: 67,
+      contacts: 3,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 3 * 86400000).toISOString(),
+    },
+    {
+      id: 'metal-001',
+      title: 'Sucata de ferro e aço - 2 toneladas disponíveis',
+      description: 'Sucata de ferro e aço de diversas origens: perfis, chapas, barras. Material limpo, separado por tipo. Ideal para fundição ou reciclagem. Temos balança no local. Aceito negociação para grandes volumes.',
+      category: 'metais',
+      condition: 'for_pickup',
+      price: 3200,
+      quantity: '2',
+      unit: 'tons',
+      location: 'Belo Horizonte, MG',
+      images: ['/materiais/metais-sucata-640w.jpg'],
+      listing_type: 'sale',
+      delivery_options: ['pickup', 'delivery_paid'],
+      seller_name: 'ReciclaMetais BH',
+      seller_email: 'recicla@demo.com',
+      created_by: 'recicla@demo.com',
+      status: 'active',
+      views: 204,
+      contacts: 12,
+      is_boosted: true,
+      boost_until: new Date(Date.now() + 5 * 86400000).toISOString(),
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 5 * 86400000).toISOString(),
+    },
+    {
+      id: 'plastic-001',
+      title: 'Garrafas PET limpas para artesanato - doação',
+      description: 'Doando aproximadamente 200 garrafas PET de 2 litros, limpas e sem rótulo. Ótimas para artesanato, vasos de plantas ou projetos escolares. Retirar no endereço.',
+      category: 'plastico',
+      condition: 'used_good',
+      price: 0,
+      quantity: '200',
+      unit: 'units',
+      location: 'Rio de Janeiro, RJ',
+      images: ['/materiais/plastico-garrafas-640w.jpg'],
+      listing_type: 'donation',
+      delivery_options: ['pickup'],
+      seller_name: 'Ana Verde',
+      seller_email: 'ana@demo.com',
+      created_by: 'ana@demo.com',
+      status: 'active',
+      views: 312,
+      contacts: 18,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 0.5 * 86400000).toISOString(),
+    },
+    {
+      id: 'electronic-001',
+      title: 'Placas de circuito eletrônico para reciclagem',
+      description: 'Lote com 15kg de placas de circuito impresso de computadores antigos. Material ideal para recuperação de metais preciosos (ouro, prata, paládio). Venda por peso.',
+      category: 'eletronico',
+      condition: 'for_pickup',
+      price: 450,
+      quantity: '15',
+      unit: 'kg',
+      location: 'Porto Alegre, RS',
+      images: ['/materiais/eletronico-placas-640w.jpg'],
+      listing_type: 'sale',
+      delivery_options: ['pickup', 'mail'],
+      seller_name: 'TechRecicla',
+      seller_email: 'tech@demo.com',
+      created_by: 'tech@demo.com',
+      status: 'active',
+      views: 56,
+      contacts: 2,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 4 * 86400000).toISOString(),
+    },
+    {
+      id: 'stone-001',
+      title: 'Pedras de granito irregular - sobra de mineração',
+      description: 'Pedras de granito em formato irregular, tamanhos variados (10cm a 40cm). Ótimas para paisagismo, muros de arrimo e decoração de jardins. Vendemos por metro cúbico.',
+      category: 'pedras',
+      condition: 'new',
+      price: 180,
+      quantity: '5',
+      unit: 'other',
+      location: 'Vitória, ES',
+      images: ['/materiais/pedras-lote-640w.jpg'],
+      listing_type: 'sale',
+      delivery_options: ['pickup', 'delivery_paid'],
+      seller_name: 'Pedreira ES',
+      seller_email: 'pedreira@demo.com',
+      created_by: 'pedreira@demo.com',
+      status: 'active',
+      views: 34,
+      contacts: 1,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 6 * 86400000).toISOString(),
+    },
+    {
+      id: 'glass-001',
+      title: 'Vidro temperado 8mm - retalhos diversos tamanhos',
+      description: 'Retalhos de vidro temperado 8mm, diversos tamanhos (de 30x30cm até 80x120cm). Sobra de vidraçaria. Ótimos para mesas, prateleiras e tampos. Preço por peça; consulte tamanhos disponíveis.',
+      category: 'vidro',
+      condition: 'new',
+      price: 45,
+      quantity: '20',
+      unit: 'units',
+      location: 'Florianópolis, SC',
+      images: ['/materiais/vidro-frascos-640w.jpg'],
+      listing_type: 'sale',
+      delivery_options: ['pickup'],
+      seller_name: 'Vidraçaria SC',
+      seller_email: 'vidro@demo.com',
+      created_by: 'vidro@demo.com',
+      status: 'active',
+      views: 78,
+      contacts: 4,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 1.5 * 86400000).toISOString(),
+    },
+  ];
+
+  /**
+   * Anúncios da própria conta de demonstração.
+   *
+   * Na versão 4.0 todos os anúncios de exemplo pertenciam a vendedores fictícios
+   * e a conta demo não tinha nenhum — então "Meus anúncios" abria vazia e não era
+   * possível exercitar impulsionamento, edição, pausa nem o painel do vendedor
+   * sem antes cadastrar um anúncio à mão. O teste de fluxo (C2) expôs isso.
+   */
+  const demoOwnListings: Array<Omit<Listing, 'id'> & { id: string }> = [
+    {
+      id: 'demo-own-001',
+      title: 'Portas de madeira maciça de demolição - 4 unidades',
+      description:
+        'Quatro portas de madeira maciça retiradas de uma casa dos anos 1970, medindo 2,10m x 80cm. Madeira em bom estado, precisa apenas de lixamento e acabamento. Ideais para restauro, marcenaria ou projetos rústicos. Vendo o conjunto.',
+      category: 'madeira',
+      condition: 'used_good',
+      price: 480,
+      quantity: '4',
+      unit: 'units',
+      location: 'São Paulo, SP',
+      images: [
+        '/materiais/madeira-demolicao-640w.jpg',
+        '/materiais/azulejos-sobra-640w.jpg',
+      ],
+      listing_type: 'sale',
+      delivery_options: ['pickup', 'delivery_paid'],
+      seller_name: 'Maria Silva',
+      seller_email: 'demo@handmade.com',
+      created_by: 'demo@handmade.com',
+      status: 'active',
+      views: 96,
+      contacts: 6,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 3 * 86400000).toISOString(),
+    },
+    {
+      id: 'demo-own-002',
+      title: 'Azulejos brancos 15x15 - sobra de reforma, 6 m²',
+      description:
+        'Sobra de reforma de banheiro: aproximadamente 6 m² de azulejo branco brilhante 15x15cm, todos na caixa original. Mesmo lote, sem variação de tom. Retirada no local.',
+      category: 'construcao',
+      condition: 'new',
+      price: 140,
+      quantity: '6',
+      unit: 'm2',
+      location: 'São Paulo, SP',
+      images: ['/materiais/portas-madeira-640w.jpg'],
+      listing_type: 'sale',
+      delivery_options: ['pickup'],
+      seller_name: 'Maria Silva',
+      seller_email: 'demo@handmade.com',
+      created_by: 'demo@handmade.com',
+      status: 'active',
+      views: 41,
+      contacts: 2,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 1.2 * 86400000).toISOString(),
+    },
+    {
+      id: 'demo-own-003',
+      title: 'Latas de tinta acrílica pela metade - doação',
+      description:
+        'Três latas de 3,6L de tinta acrílica (branco neve, palha e cinza) com cerca de metade do conteúdo. Bem fechadas, sem secar. Doando para quem for retirar.',
+      category: 'outro',
+      condition: 'used_good',
+      price: 0,
+      quantity: '3',
+      unit: 'units',
+      location: 'São Paulo, SP',
+      images: ['/materiais/ferragens-diversas-640w.jpg'],
+      listing_type: 'donation',
+      delivery_options: ['pickup'],
+      seller_name: 'Maria Silva',
+      seller_email: 'demo@handmade.com',
+      created_by: 'demo@handmade.com',
+      status: 'paused',
+      views: 18,
+      contacts: 1,
+      is_boosted: false,
+      is_flagged: false,
+      report_count: 0,
+      created_date: new Date(Date.now() - 8 * 86400000).toISOString(),
+    },
+  ];
+
+  [...sampleListings, ...demoOwnListings].forEach(listing => listingStore.create(listing as any));
+
+  if (userStore.list().length === 0) {
+    const demoUser: User = {
+      id: 'demo_user_1',
+      email: 'demo@handmade.com',
+      full_name: 'Maria Silva',
+      account_type: 'individual',
+      phone: '(11) 99999-0000',
+      city: 'São Paulo',
+      state: 'SP',
+      verified: true,
+      email_verified: true,
+      auth_provider: 'password',
+      firebase_uid: 'password_demo_handmade_com',
+      role: 'user',
+      subscription_plan: 'free',
+      status: 'active',
+      onboarding_completed_screens: [],
+      created_at: new Date(Date.now() - 30 * 86400000).toISOString(),
+    };
+    const googleUser: User = {
+      id: 'google_demo_user',
+      email: 'maria.silva.google@gmail.com',
+      full_name: 'Maria Silva',
+      account_type: 'individual',
+      phone: '(11) 98888-1234',
+      city: 'Guarulhos',
+      state: 'SP',
+      verified: true,
+      email_verified: true,
+      auth_provider: 'google',
+      firebase_uid: 'google_maria_silva_google_gmail_com',
+      role: 'user',
+      subscription_plan: 'free',
+      status: 'active',
+      onboarding_completed_screens: ['google_oauth'],
+      avatar_url: '/materiais/avatar-vendedora-320w.jpg',
+      created_at: new Date(Date.now() - 18 * 86400000).toISOString(),
+    };
+    userStore.create(demoUser as any);
+    userStore.create(googleUser as any);
+    localStorage.setItem(CREDENTIALS_KEY, JSON.stringify([
+      { email: 'demo@handmade.com', password: 'Demo@1234', provider: 'password' },
+      { email: 'maria.silva.google@gmail.com', password: '', provider: 'google' },
+    ]));
+  }
+
+  const firstListing = listingStore.get('wood-001') || listingStore.list()[0];
+  if (firstListing) {
+    const convId = 'carlos_demo_wood_001';
+    const now = Date.now();
+    const demoMessages: Array<Omit<Message, 'id'> & { id: string }> = [
+      {
+        id: 'msg-demo-001',
+        conversation_id: convId,
+        listing_id: firstListing.id,
+        listing_title: firstListing.title,
+        listing_image: firstListing.images?.[0] || '',
+        listing_price: firstListing.price,
+        sender_email: 'demo@handmade.com',
+        sender_name: 'Maria Silva',
+        recipient_email: firstListing.created_by,
+        recipient_name: firstListing.seller_name,
+        content: 'Olá! Vi seu anúncio e tenho interesse. O material ainda está disponível?',
+        read: true,
+        created_date: new Date(now - 3600000 * 5).toISOString(),
+      },
+      {
+        id: 'msg-demo-002',
+        conversation_id: convId,
+        listing_id: firstListing.id,
+        listing_title: firstListing.title,
+        listing_image: firstListing.images?.[0] || '',
+        listing_price: firstListing.price,
+        sender_email: firstListing.created_by,
+        sender_name: firstListing.seller_name,
+        recipient_email: 'demo@handmade.com',
+        recipient_name: 'Maria Silva',
+        content: 'Oi Maria! Sim, está disponível. Posso separar para você. Quer combinar a retirada?',
+        read: true,
+        created_date: new Date(now - 3600000 * 4.5).toISOString(),
+      },
+      {
+        id: 'msg-demo-003',
+        conversation_id: convId,
+        listing_id: firstListing.id,
+        listing_title: firstListing.title,
+        listing_image: firstListing.images?.[0] || '',
+        listing_price: firstListing.price,
+        sender_email: 'demo@handmade.com',
+        sender_name: 'Maria Silva',
+        recipient_email: firstListing.created_by,
+        recipient_name: firstListing.seller_name,
+        content: 'Ótimo! Consigo passar aí no sábado pela manhã. Você faz desconto se eu levar tudo?',
+        read: true,
+        created_date: new Date(now - 3600000 * 4).toISOString(),
+      },
+      {
+        id: 'msg-demo-004',
+        conversation_id: convId,
+        listing_id: firstListing.id,
+        listing_title: firstListing.title,
+        listing_image: firstListing.images?.[0] || '',
+        listing_price: firstListing.price,
+        sender_email: firstListing.created_by,
+        sender_name: firstListing.seller_name,
+        recipient_email: 'demo@handmade.com',
+        recipient_name: 'Maria Silva',
+        content: 'Posso fazer por R$ 220 se levar o lote completo.',
+        read: true,
+        created_date: new Date(now - 3600000 * 3.5).toISOString(),
+      },
+      {
+        id: 'msg-demo-005',
+        conversation_id: convId,
+        listing_id: firstListing.id,
+        listing_title: firstListing.title,
+        listing_image: firstListing.images?.[0] || '',
+        listing_price: firstListing.price,
+        sender_email: 'demo@handmade.com',
+        sender_name: 'Maria Silva',
+        recipient_email: firstListing.created_by,
+        recipient_name: firstListing.seller_name,
+        content: 'Proposta de R$ 200,00',
+        offer_price: 200,
+        offer_status: 'pending',
+        read: false,
+        created_date: new Date(now - 3600000 * 2).toISOString(),
+      },
+    ];
+    demoMessages.forEach(msg => messageStore.create(msg as any));
+  }
+
+  const demoOrderListing = listingStore.get('construction-001') || listingStore.list()[1];
+  if (demoOrderListing) {
+    orderStore.create({
+      id: 'order-demo-001',
+      listing_id: demoOrderListing.id,
+      listing_title: demoOrderListing.title,
+      listing_image: demoOrderListing.images?.[0] || '',
+      listing_snapshot: demoOrderListing,
+      seller_email: demoOrderListing.created_by,
+      seller_name: demoOrderListing.seller_name,
+      buyer_email: 'demo@handmade.com',
+      buyer_name: 'Maria Silva',
+      amount: 120,
+      platform_fee: 6,
+      seller_amount: 114,
+      fee_percent_applied: 5,
+      payment_method: 'pix',
+      payment_id: 'pay-demo-001',
+      payment_status: 'approved',
+      receipt_code: 'HM-2026-000118',
+      status: 'shipped',
+      tracking_code: 'BR123456789BR',
+      tracking_carrier: 'Correios',
+      status_history: [
+        { status: 'created', date: new Date(Date.now() - 4 * 86400000).toISOString() },
+        { status: 'paid', date: new Date(Date.now() - 3.5 * 86400000).toISOString() },
+        { status: 'shipped', date: new Date(Date.now() - 86400000).toISOString() },
+      ],
+      created_date: new Date(Date.now() - 4 * 86400000).toISOString(),
+    } as any);
+  }
+
+  // Pagamentos diretos (5.0) — substituem o extrato da carteira da versão 4.0.
+  paymentStore.create({
+    id: 'pay-demo-001',
+    order_id: 'order-demo-001',
+    payer_email: 'demo@handmade.com',
+    payee_email: 'demo@demo.com',
+    method: 'pix',
+    status: 'approved',
+    amount: 120,
+    platform_fee: 6,
+    net_amount: 114,
+    fee_percent_applied: 5,
+    pix_code: '00020126580014BR.GOV.BCB.PIX0136handmade-demo-order-0015204000053039865802BR6009SAO PAULO62070503***6304A1B2',
+    receipt_code: 'HM-2026-000118',
+    authorization_code: 'A7F31C90',
+    paid_at: new Date(Date.now() - 3.5 * 86400000).toISOString(),
+    created_at: new Date(Date.now() - 4 * 86400000).toISOString(),
+  } as any);
+  paymentStore.create({
+    id: 'pay-demo-002',
+    order_id: 'boost_wood-001',
+    payer_email: 'demo@handmade.com',
+    payee_email: 'plataforma@handmade.com.br',
+    method: 'credit_card',
+    status: 'approved',
+    amount: 19.9,
+    platform_fee: 0,
+    net_amount: 19.9,
+    fee_percent_applied: 0,
+    installments: 1,
+    card_last4: '4321',
+    card_brand: 'Visa',
+    receipt_code: 'HM-2026-000119',
+    authorization_code: 'B2D48E11',
+    paid_at: new Date(Date.now() - 2 * 86400000).toISOString(),
+    created_at: new Date(Date.now() - 2 * 86400000).toISOString(),
+  } as any);
+
+  boostStore.create({
+    id: 'boost-demo-001',
+    listing_id: 'wood-001',
+    listing_title: 'Tábuas de pinus usadas 2 metros - lote com 30 unidades',
+    user_email: 'demo@handmade.com',
+    plan_key: '7d',
+    days: 7,
+    amount: 19.9,
+    payment_id: 'pay-demo-002',
+    starts_at: new Date(Date.now() - 2 * 86400000).toISOString(),
+    ends_at: new Date(Date.now() + 5 * 86400000).toISOString(),
+    created_at: new Date(Date.now() - 2 * 86400000).toISOString(),
+  } as any);
+
+  // Consentimentos versionados exigidos pelo art. 8º da LGPD.
+  (['terms', 'privacy'] as const).forEach((document, i) => {
+    consentStore.create({
+      id: `consent-demo-00${i + 1}`,
+      user_email: 'demo@handmade.com',
+      document,
+      document_version:
+        document === 'terms' ? CURRENT_TERMS_VERSION : CURRENT_PRIVACY_VERSION,
+      granted: true,
+      created_at: new Date(Date.now() - 30 * 86400000).toISOString(),
+    } as any);
+  });
+  consentStore.create({
+    id: 'consent-demo-003',
+    user_email: 'demo@handmade.com',
+    document: 'marketing',
+    document_version: CURRENT_PRIVACY_VERSION,
+    granted: false,
+    created_at: new Date(Date.now() - 30 * 86400000).toISOString(),
+  } as any);
+
+  notificationStore.create({
+    id: 'notif-demo-001',
+    recipient_email: 'demo@handmade.com',
+    type: 'order_shipped',
+    title: 'Pedido enviado',
+    message: 'Seu pedido de tijolos reaproveitados foi enviado com rastreio BR123456789BR.',
+    action_url: '/meus-pedidos',
+    read: false,
+    created_at: new Date(Date.now() - 20 * 3600000).toISOString(),
+  } as any);
+  notificationStore.create({
+    id: 'notif-demo-002',
+    recipient_email: 'demo@handmade.com',
+    type: 'offer_received',
+    title: 'Nova proposta recebida',
+    message: 'Carlos respondeu sua proposta no lote de tábuas de pinus.',
+    action_url: '/chat/carlos_demo_wood_001',
+    read: false,
+    created_at: new Date(Date.now() - 2 * 3600000).toISOString(),
+  } as any);
+
+  favoriteStore.create({
+    id: 'fav-demo-001',
+    user_email: 'demo@handmade.com',
+    listing_id: 'wood-001',
+    created_at: new Date(Date.now() - 2 * 86400000).toISOString(),
+  } as any);
+
+  reviewStore.create({
+    id: 'review-carlos-001',
+    order_id: 'order-old-001',
+    reviewer_email: 'ana@demo.com',
+    reviewed_email: 'carlos@demo.com',
+    rating: 5,
+    comment: 'Atendimento rápido e material exatamente como anunciado.',
+    type: 'seller_review',
+    created_at: new Date(Date.now() - 12 * 86400000).toISOString(),
+  } as any);
+
+  localStorage.setItem(SEED_KEY, '1');
+}
