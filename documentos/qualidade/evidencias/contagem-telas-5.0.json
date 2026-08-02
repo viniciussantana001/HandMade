@@ -1,0 +1,153 @@
+{
+  "versao": "5.0",
+  "raiz": "G:/handmade/work/handmade_5.0/src",
+  "rotas": [
+    "/",
+    "/marketplace",
+    "/criar-anuncio",
+    "/editar-anuncio/:id",
+    "/anuncio/:id",
+    "/impulsionar/:id",
+    "/pagamento/:id",
+    "/pagamento/recibo/:id",
+    "/chat",
+    "/chat/:conversationId",
+    "/perfil",
+    "/vendedor/:email",
+    "/perfil/editar",
+    "/dashboard",
+    "/meus-anuncios",
+    "/meus-pedidos",
+    "/meus-pagamentos",
+    "/favoritos",
+    "/notificacoes",
+    "/planos",
+    "/como-funciona",
+    "/ajuda",
+    "/termos",
+    "/politica-de-privacidade",
+    "/privacidade",
+    "/tributos",
+    "/plano-de-negocio",
+    "/login",
+    "/cadastro",
+    "/bem-vindo",
+    "*"
+  ],
+  "etapas": {
+    "BoostListing.tsx": [
+      "done",
+      "payment",
+      "plan",
+      "processing"
+    ],
+    "Checkout.tsx": [
+      "confirm",
+      "method",
+      "processing"
+    ],
+    "CreateListing.tsx": [
+      "1",
+      "2",
+      "3"
+    ],
+    "EditListing.tsx": [
+      "1",
+      "2",
+      "3"
+    ],
+    "Register.tsx": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "estados": {
+    "BoostListing.tsx": [
+      "não encontrado"
+    ],
+    "Checkout.tsx": [
+      "não encontrado"
+    ],
+    "EditListing.tsx": [
+      "não encontrado"
+    ],
+    "ListingDetail.tsx": [
+      "não encontrado"
+    ],
+    "PaymentReceipt.tsx": [
+      "não encontrado"
+    ],
+    "SellerProfile.tsx": [
+      "não encontrado"
+    ]
+  },
+  "sobreposicoes": {
+    "DialogContent": 6,
+    "AlertDialogContent": 1,
+    "SheetContent": 0,
+    "DrawerContent": 0
+  },
+  "sobrePorArquivo": {
+    "Chat.tsx": 1,
+    "EditProfile.tsx": 1,
+    "ListingDetail.tsx": 1,
+    "Login.tsx": 2,
+    "MyOrders.tsx": 1,
+    "common/ConfirmDialog.tsx": 1
+  },
+  "totalPorPadrao": {
+    "onClick": 132,
+    "onSubmit": 1,
+    "onValueChange": 18,
+    "onCheckedChange": 9,
+    "onChange": 52,
+    "onKeyDown": 1,
+    "Link to": 59
+  },
+  "porArquivo": {
+    "BoostListing.tsx": 15,
+    "BusinessPlan.tsx": 1,
+    "Chat.tsx": 16,
+    "Checkout.tsx": 13,
+    "CreateListing.tsx": 21,
+    "Dashboard.tsx": 7,
+    "EditListing.tsx": 21,
+    "EditProfile.tsx": 14,
+    "Favorites.tsx": 1,
+    "Help.tsx": 2,
+    "Home.tsx": 6,
+    "HowItWorks.tsx": 1,
+    "LegalDocument.tsx": 2,
+    "ListingDetail.tsx": 19,
+    "Login.tsx": 15,
+    "Marketplace.tsx": 12,
+    "MyListings.tsx": 11,
+    "MyOrders.tsx": 12,
+    "MyPayments.tsx": 4,
+    "Notifications.tsx": 2,
+    "PaymentReceipt.tsx": 8,
+    "Plans.tsx": 2,
+    "PrivacyCenter.tsx": 10,
+    "Profile.tsx": 4,
+    "Register.tsx": 27,
+    "SellerProfile.tsx": 2,
+    "SellerTaxes.tsx": 4,
+    "Welcome.tsx": 2,
+    "common/ConfirmDialog.tsx": 1,
+    "common/ErrorBoundary.tsx": 2,
+    "common/PhotoPicker.tsx": 7,
+    "common/StateViews.tsx": 2,
+    "layout/AppHeader.tsx": 5,
+    "listings/ListingCard.tsx": 1
+  },
+  "resumo": {
+    "rotas": 31,
+    "passosExtras": 11,
+    "estados": 6,
+    "telasCheias": 48,
+    "sobreposicoes": 7,
+    "telas": 55,
+    "interacoes": 272
+  }
+}

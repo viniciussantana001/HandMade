@@ -1,0 +1,247 @@
+{
+  "total": 0,
+  "telas": 48,
+  "porTipo": {},
+  "relatorio": [
+    {
+      "rota": "/",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/marketplace",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/login",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/cadastro",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/como-funciona",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/ajuda",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/termos",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/politica-de-privacidade",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/dashboard",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/meus-anuncios",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/meus-pedidos",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/meus-pagamentos",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/favoritos",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/notificacoes",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/perfil",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/perfil/editar",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/planos",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/tributos",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/plano-de-negocio",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/privacidade",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/chat",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/criar-anuncio",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/anuncio/wood-001",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/impulsionar/hm-001",
+      "tema": "claro",
+      "problemas": []
+    },
+    {
+      "rota": "/",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/marketplace",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/login",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/cadastro",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/como-funciona",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/ajuda",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/termos",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/politica-de-privacidade",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/dashboard",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/meus-anuncios",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/meus-pedidos",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/meus-pagamentos",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/favoritos",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/notificacoes",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/perfil",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/perfil/editar",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/planos",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/tributos",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/plano-de-negocio",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/privacidade",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/chat",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/criar-anuncio",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/anuncio/wood-001",
+      "tema": "escuro",
+      "problemas": []
+    },
+    {
+      "rota": "/impulsionar/hm-001",
+      "tema": "escuro",
+      "problemas": []
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "passou": 36,
+  "total": 36,
+  "results": [
+    {
+      "nome": "Home carrega com conteúdo",
+      "ok": true,
+      "detalhe": "1893 caracteres visíveis"
+    },
+    {
+      "nome": "Marketplace carrega",
+      "ok": true,
+      "detalhe": "1177 caracteres visíveis"
+    },
+    {
+      "nome": "Login autentica e sai da tela de login",
+      "ok": true,
+      "detalhe": "/"
+    },
+    {
+      "nome": "Tela /dashboard",
+      "ok": true,
+      "detalhe": "1132 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /meus-anuncios",
+      "ok": true,
+      "detalhe": "326 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /meus-pedidos",
+      "ok": true,
+      "detalhe": "434 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /meus-pagamentos",
+      "ok": true,
+      "detalhe": "541 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /favoritos",
+      "ok": true,
+      "detalhe": "166 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /notificacoes",
+      "ok": true,
+      "detalhe": "287 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /perfil",
+      "ok": true,
+      "detalhe": "634 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /planos",
+      "ok": true,
+      "detalhe": "662 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /tributos",
+      "ok": true,
+      "detalhe": "3573 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /plano-de-negocio",
+      "ok": true,
+      "detalhe": "1612 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /privacidade",
+      "ok": true,
+      "detalhe": "1857 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /termos",
+      "ok": true,
+      "detalhe": "8640 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /politica-de-privacidade",
+      "ok": true,
+      "detalhe": "9453 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /ajuda",
+      "ok": true,
+      "detalhe": "424 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /como-funciona",
+      "ok": true,
+      "detalhe": "1223 caracteres visíveis"
+    },
+    {
+      "nome": "Tela /chat",
+      "ok": true,
+      "detalhe": "162 caracteres visíveis"
+    },
+    {
+      "nome": "B2 — tela de impulsionamento abre",
+      "ok": true,
+      "detalhe": "506 caracteres visíveis"
+    },
+    {
+      "nome": "B2 — passo de pagamento do impulso",
+      "ok": true,
+      "detalhe": "329 caracteres visíveis"
+    },
+    {
+      "nome": "B2 — conclusão do impulso NÃO deixa tela branca",
+      "ok": true,
+      "detalhe": "547 caracteres visíveis"
+    },
+    {
+      "nome": "Anúncio de terceiro disponível para compra",
+      "ok": true,
+      "detalhe": "/anuncio/wood-001"
+    },
+    {
+      "nome": "Detalhe do anúncio abre",
+      "ok": true,
+      "detalhe": "881 caracteres visíveis"
+    },
+    {
+      "nome": "B3 — checkout de pagamento direto abre",
+      "ok": true,
+      "detalhe": "522 caracteres visíveis"
+    },
+    {
+      "nome": "B3 — rota de pagamento direto",
+      "ok": true,
+      "detalhe": "/pagamento/wood-001"
+    },
+    {
+      "nome": "B3 — passo de confirmação",
+      "ok": true,
+      "detalhe": "647 caracteres visíveis"
+    },
+    {
+      "nome": "B3 — recibo emitido sem tela branca",
+      "ok": true,
+      "detalhe": "858 caracteres visíveis"
+    },
+    {
+      "nome": "B3 — recibo com código HM-AAAA-NNNNNN",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "B1 — após sair, a tela NÃO fica branca",
+      "ok": true,
+      "detalhe": "345 caracteres visíveis"
+    },
+    {
+      "nome": "B1 — redireciona para /login",
+      "ok": true,
+      "detalhe": "/login"
+    },
+    {
+      "nome": "B1 — voltar após sair não deixa tela branca",
+      "ok": true,
+      "detalhe": "345 caracteres visíveis"
+    },
+    {
+      "nome": "B1 — voltar não retorna à tela autenticada",
+      "ok": true,
+      "detalhe": "/login"
+    },
+    {
+      "nome": "Rota inexistente mostra página 404",
+      "ok": true,
+      "detalhe": "41 caracteres visíveis"
+    },
+    {
+      "nome": "/carteira não existe mais",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "Nenhum erro de console durante o roteiro",
+      "ok": true,
+      "detalhe": ""
+    }
+  ],
+  "erros": []
+}

@@ -1,0 +1,115 @@
+{
+  "versao": "4.0",
+  "raiz": "G:\\handmade\\work\\handmade_4.0\\src",
+  "rotas": [
+    "/",
+    "/marketplace",
+    "/criar-anuncio",
+    "/editar-anuncio/:id",
+    "/anuncio/:id",
+    "/chat",
+    "/chat/:conversationId",
+    "/perfil",
+    "/vendedor/:email",
+    "/perfil/editar",
+    "/dashboard",
+    "/meus-anuncios",
+    "/meus-pedidos",
+    "/carteira",
+    "/favoritos",
+    "/notificacoes",
+    "/planos",
+    "/como-funciona",
+    "/ajuda",
+    "/login",
+    "/cadastro",
+    "/bem-vindo",
+    "*"
+  ],
+  "etapas": {
+    "CreateListing.tsx": [
+      "1",
+      "2",
+      "3"
+    ],
+    "EditListing.tsx": [
+      "1",
+      "2",
+      "3"
+    ],
+    "Register.tsx": [
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "estados": {
+    "EditListing.tsx": [
+      "não encontrado"
+    ],
+    "ListingDetail.tsx": [
+      "não encontrado"
+    ],
+    "SellerProfile.tsx": [
+      "não encontrado"
+    ]
+  },
+  "sobreposicoes": {
+    "DialogContent": 11,
+    "AlertDialogContent": 0,
+    "SheetContent": 0,
+    "DrawerContent": 0
+  },
+  "sobrePorArquivo": {
+    "Chat.tsx": 1,
+    "EditProfile.tsx": 2,
+    "ListingDetail.tsx": 1,
+    "Login.tsx": 2,
+    "MyListings.tsx": 1,
+    "MyOrders.tsx": 2,
+    "Wallet.tsx": 2
+  },
+  "totalPorPadrao": {
+    "onClick": 113,
+    "onSubmit": 0,
+    "onValueChange": 13,
+    "onCheckedChange": 6,
+    "onChange": 40,
+    "onKeyDown": 2,
+    "Link to": 45
+  },
+  "porArquivo": {
+    "Chat.tsx": 16,
+    "CreateListing.tsx": 22,
+    "Dashboard.tsx": 7,
+    "EditListing.tsx": 24,
+    "EditProfile.tsx": 13,
+    "Favorites.tsx": 1,
+    "Help.tsx": 2,
+    "Home.tsx": 6,
+    "HowItWorks.tsx": 1,
+    "ListingDetail.tsx": 16,
+    "Login.tsx": 16,
+    "Marketplace.tsx": 12,
+    "MyListings.tsx": 13,
+    "MyOrders.tsx": 12,
+    "Notifications.tsx": 2,
+    "Plans.tsx": 2,
+    "Profile.tsx": 4,
+    "Register.tsx": 27,
+    "SellerProfile.tsx": 2,
+    "Wallet.tsx": 13,
+    "Welcome.tsx": 2,
+    "layout/AppHeader.tsx": 5,
+    "listings/ListingCard.tsx": 1
+  },
+  "resumo": {
+    "rotas": 23,
+    "passosExtras": 6,
+    "estados": 3,
+    "telasCheias": 32,
+    "sobreposicoes": 11,
+    "telas": 43,
+    "interacoes": 219
+  }
+}
