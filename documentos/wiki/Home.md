@@ -90,7 +90,7 @@ Todos reexecutáveis pelos roteiros descritos em [Testes e qualidade](18-testes-
 
 | Recurso | Endereço |
 |---|---|
-| Protótipo em funcionamento | `<INSERIR-LINK>` |
+| Protótipo em funcionamento | [Protótipo](https://handmade-b0f.pages.dev/) |
 | Código do protótipo | `prototipo/` no repositório |
 | Monografia completa | `documentos/monografia/` |
 | Diagramas (UML e DER) | `documentos/diagramas/` |
