@@ -174,10 +174,6 @@ documentos/
   telas/                      29 capturas do protótipo 5.0
   qualidade/                  Personas, métodos de avaliação, ferramentas e evidências
   wiki/                       Conteúdo da Wiki, separado por integrante
-docs/
-  tutorial-postagem.md        Como cada integrante publica sua parte
-  matriz-responsabilidades.md Quem faz o quê, com escopo e apresentação
-  fluxo-github.md             Issues, branches, commits e pull requests
 
 ---
 
