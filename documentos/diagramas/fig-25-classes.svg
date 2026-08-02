@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1960" height="1594" viewBox="0 0 1960 1594">
+
+  <defs>
+    <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#3F4A5A"/>
+    </marker>
+    <marker id="setaVerde" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#206F4A"/>
+    </marker>
+    <marker id="setaAberta" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9" fill="none" stroke="#206F4A" stroke-width="1.4"/>
+    </marker>
+    <marker id="heranca" viewBox="0 0 12 12" refX="11" refY="6"
+            markerWidth="12" markerHeight="12" orient="auto-start-reverse">
+      <path d="M 0 1 L 11 6 L 0 11 z" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.4"/>
+    </marker>
+    <filter id="sombra" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.2" flood-color="#0F1F17" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="1960" height="1594" fill="#FAFAFA"/>
+<text x="980" y="52" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="30" fill="#206F4A" font-weight="800" text-anchor="middle">Diagrama de Classes — HandMade</text>
+<text x="980" y="78" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#5A6472" font-weight="400" text-anchor="middle">Modelo de domínio do marketplace mobile — versão 5.0</text>
+<line x1="480" y1="284.5" x2="600" y2="284.5" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="512.8625" y="267" width="54.275000000000006" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="540" y="277.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">publica</text>
+<text x="496" y="299.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="584" y="299.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">0..*</text>
+<line x1="950" y1="227.5" x2="1070" y2="227.5" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="979.7" y="210" width="60.6" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="1010" y="220.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">pertence</text>
+<text x="966" y="242.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">0..*</text>
+<text x="1054" y="242.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<line x1="305" y1="439" x2="305" y2="560" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="271.5375" y="489" width="66.92500000000001" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="305" y="499.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">participa</text>
+<text x="287" y="455" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="287" y="550" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">0..*</text>
+<line x1="480" y1="657.5" x2="600" y2="657.5" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="516.025" y="640" width="47.95" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="540" y="650.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">contém</text>
+<text x="496" y="672.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="584" y="672.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1..*</text>
+<line x1="1420" y1="695.5" x2="1540" y2="695.5" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="1433.8875" y="678" width="92.22500000000001" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="1480" y="688.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">é quitado por</text>
+<text x="1436" y="710.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="1524" y="710.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<line x1="775" y1="774" x2="775" y2="960" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="757.35" y="856.5" width="35.3" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="775" y="867" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">gera</text>
+<text x="757" y="790" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="757" y="950" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">0..*</text>
+<line x1="1245" y1="831" x2="1245" y2="960" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="1208.375" y="885" width="73.25" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="1245" y="895.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">pode gerar</text>
+<text x="1227" y="847" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="1227" y="950" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">0..*</text>
+<line x1="1715" y1="850" x2="1715" y2="960" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="1684.7" y="894.5" width="60.6" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="1715" y="905" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">registra</text>
+<text x="1697" y="866" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="1697" y="950" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">0..*</text>
+<path d="M 950 418 L 1024 418 L 1024 655.5 L 1070 655.5" fill="none" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="1006.35" y="526.25" width="35.3" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="1024" y="536.75" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">gera</text>
+<path d="M 835 130 L 835 108 L 1715 108 L 1715 130" fill="none" stroke="#206F4A" stroke-width="1.4" marker-end="url(#setaVerde)"/>
+<rect x="1251.025" y="91.5" width="47.95" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="1275" y="102" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">recebe</text>
+<text x="853" y="122" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">1</text>
+<text x="1695" y="122" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle">0..*</text>
+<path d="M 1125 831 L 1125 930 L 395 930 L 395 960" fill="none" stroke="#206F4A" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#setaVerde)"/>
+<rect x="1082.05" y="912.5" width="85.9" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="1125" y="923" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">origina 0..2</text>
+<path d="M 130 404.5 L 94 404.5 L 94 1378.5 L 130 1378.5" fill="none" stroke="#206F4A" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#setaVerde)"/>
+<rect x="63.7" y="821" width="60.6" height="16.5" fill="#F4F6F5" opacity="0.96"/><text x="94" y="831.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="middle" font-style="italic">favorita</text>
+<path d="M 700 1300 L 700 1276 L 715 1276 L 715 774" fill="none" stroke="#4A9B73" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M 930 1300 L 930 1276 L 835 1276 L 835 774" fill="none" stroke="#4A9B73" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M 1177.5 1300 L 1177.5 1276 L 1245 1276 L 1245 1174" fill="none" stroke="#4A9B73" stroke-width="1" stroke-dasharray="3 3"/>
+<path d="M 1640 1300 L 1640 1276 L 1715 1276 L 1715 1174" fill="none" stroke="#4A9B73" stroke-width="1" stroke-dasharray="3 3"/>
+<g filter="url(#sombra)">
+<rect x="130" y="130" width="350" height="309" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 130 164 L 130 138 Q 130 130 138 130 L 472 130 Q 480 130 480 138 L 480 164 Z" fill="#206F4A"/>
+<text x="305" y="143" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="305" y="157" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Usuario</text>
+<text x="142" y="184" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="142" y="203" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- nome: String</text>
+<text x="142" y="222" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- email: String</text>
+<text x="142" y="241" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- telefone: String</text>
+<text x="142" y="260" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- tipo: TipoUsuario</text>
+<text x="142" y="279" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- plano: PlanoAssinatura</text>
+<text x="142" y="298" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- reputacao: Double</text>
+<text x="142" y="317" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- cidade: String</text>
+<text x="142" y="336" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- ativo: Boolean</text>
+<line x1="130" y1="349" x2="480" y2="349" stroke="#D8DEE4" stroke-width="1"/>
+<text x="142" y="369" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ cadastrar(): void</text>
+<text x="142" y="388" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ login(): void</text>
+<text x="142" y="407" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ editarPerfil(): void</text>
+<text x="142" y="426" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ excluirConta(): void</text>
+<g filter="url(#sombra)">
+<rect x="600" y="130" width="350" height="328" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 600 164 L 600 138 Q 600 130 608 130 L 942 130 Q 950 130 950 138 L 950 164 Z" fill="#206F4A"/>
+<text x="775" y="143" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="775" y="157" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Anuncio</text>
+<text x="612" y="184" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="612" y="203" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- titulo: String</text>
+<text x="612" y="222" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- descricao: String</text>
+<text x="612" y="241" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- preco: Double</text>
+<text x="612" y="260" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- tipoNegociacao: TipoNeg</text>
+<text x="612" y="279" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- condicao: Condicao</text>
+<text x="612" y="298" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- imagens: List&lt;String&gt;</text>
+<text x="612" y="317" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- status: StatusAnuncio</text>
+<text x="612" y="336" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- impulsionado: Boolean</text>
+<line x1="600" y1="349" x2="950" y2="349" stroke="#D8DEE4" stroke-width="1"/>
+<text x="612" y="369" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ publicar(): void</text>
+<text x="612" y="388" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ editar(): void</text>
+<text x="612" y="407" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ pausar(): void</text>
+<text x="612" y="426" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ reativar(): void</text>
+<text x="612" y="445" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ excluir(): void</text>
+<g filter="url(#sombra)">
+<rect x="1070" y="130" width="350" height="195" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 1070 164 L 1070 138 Q 1070 130 1078 130 L 1412 130 Q 1420 130 1420 138 L 1420 164 Z" fill="#206F4A"/>
+<text x="1245" y="143" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="1245" y="157" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Categoria</text>
+<text x="1082" y="184" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="1082" y="203" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- nome: String</text>
+<text x="1082" y="222" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- iconeUrl: String</text>
+<text x="1082" y="241" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- ativa: Boolean</text>
+<line x1="1070" y1="254" x2="1420" y2="254" stroke="#D8DEE4" stroke-width="1"/>
+<text x="1082" y="274" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ listar(): List&lt;Categoria&gt;</text>
+<text x="1082" y="293" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ criar(): void</text>
+<text x="1082" y="312" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ desativar(): void</text>
+<g filter="url(#sombra)">
+<rect x="1540" y="130" width="350" height="252" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 1540 164 L 1540 138 Q 1540 130 1548 130 L 1882 130 Q 1890 130 1890 138 L 1890 164 Z" fill="#206F4A"/>
+<text x="1715" y="143" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="1715" y="157" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Impulsionamento</text>
+<text x="1552" y="184" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="1552" y="203" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- anuncioId: String</text>
+<text x="1552" y="222" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- planoChave: String</text>
+<text x="1552" y="241" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- dias: Int</text>
+<text x="1552" y="260" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- valor: Double</text>
+<text x="1552" y="279" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- pagamentoId: String</text>
+<text x="1552" y="298" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- inicioEm: Timestamp</text>
+<text x="1552" y="317" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- fimEm: Timestamp</text>
+<line x1="1540" y1="330" x2="1890" y2="330" stroke="#D8DEE4" stroke-width="1"/>
+<text x="1552" y="350" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ contratar(): void</text>
+<text x="1552" y="369" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ estaVigente(): Boolean</text>
+<g filter="url(#sombra)">
+<rect x="130" y="560" width="350" height="195" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 130 594 L 130 568 Q 130 560 138 560 L 472 560 Q 480 560 480 568 L 480 594 Z" fill="#206F4A"/>
+<text x="305" y="573" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="305" y="587" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Conversa</text>
+<text x="142" y="614" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="142" y="633" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- anuncioId: String</text>
+<text x="142" y="652" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- participantes: List&lt;String&gt;</text>
+<text x="142" y="671" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- ultimaMensagem: String</text>
+<text x="142" y="690" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- naoLidas: Map&lt;String,Int&gt;</text>
+<line x1="130" y1="703" x2="480" y2="703" stroke="#D8DEE4" stroke-width="1"/>
+<text x="142" y="723" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ iniciar(): void</text>
+<text x="142" y="742" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ arquivar(): void</text>
+<g filter="url(#sombra)">
+<rect x="600" y="560" width="350" height="214" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 600 594 L 600 568 Q 600 560 608 560 L 942 560 Q 950 560 950 568 L 950 594 Z" fill="#206F4A"/>
+<text x="775" y="573" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="775" y="587" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Mensagem</text>
+<text x="612" y="614" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="612" y="633" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- conversaId: String</text>
+<text x="612" y="652" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- remetenteId: String</text>
+<text x="612" y="671" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- conteudo: String</text>
+<text x="612" y="690" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- precoProposta: Double</text>
+<text x="612" y="709" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- lida: Boolean</text>
+<line x1="600" y1="722" x2="950" y2="722" stroke="#D8DEE4" stroke-width="1"/>
+<text x="612" y="742" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ enviar(): void</text>
+<text x="612" y="761" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ marcarLida(): void</text>
+<g filter="url(#sombra)">
+<rect x="1070" y="560" width="350" height="271" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 1070 594 L 1070 568 Q 1070 560 1078 560 L 1412 560 Q 1420 560 1420 568 L 1420 594 Z" fill="#206F4A"/>
+<text x="1245" y="573" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="1245" y="587" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Pedido</text>
+<text x="1082" y="614" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="1082" y="633" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- anuncioId: String</text>
+<text x="1082" y="652" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- compradorId: String</text>
+<text x="1082" y="671" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- vendedorId: String</text>
+<text x="1082" y="690" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- valorTotal: Double</text>
+<text x="1082" y="709" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- taxaPlataforma: Double</text>
+<text x="1082" y="728" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- status: StatusPedido</text>
+<text x="1082" y="747" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- criadoEm: Timestamp</text>
+<line x1="1070" y1="760" x2="1420" y2="760" stroke="#D8DEE4" stroke-width="1"/>
+<text x="1082" y="780" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ criar(): void</text>
+<text x="1082" y="799" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ confirmar(): void</text>
+<text x="1082" y="818" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ cancelar(): void</text>
+<g filter="url(#sombra)">
+<rect x="1540" y="560" width="350" height="290" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 1540 594 L 1540 568 Q 1540 560 1548 560 L 1882 560 Q 1890 560 1890 568 L 1890 594 Z" fill="#206F4A"/>
+<text x="1715" y="573" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="1715" y="587" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Pagamento</text>
+<text x="1552" y="614" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="1552" y="633" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- pedidoId: String</text>
+<text x="1552" y="652" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- metodo: MetodoPagamento</text>
+<text x="1552" y="671" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- status: StatusPagamento</text>
+<text x="1552" y="690" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- valor: Double</text>
+<text x="1552" y="709" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- taxaPlataforma: Double</text>
+<text x="1552" y="728" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- valorLiquido: Double</text>
+<text x="1552" y="747" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- codigoRecibo: String</text>
+<text x="1552" y="766" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- autorizacao: String</text>
+<line x1="1540" y1="779" x2="1890" y2="779" stroke="#D8DEE4" stroke-width="1"/>
+<text x="1552" y="799" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ processar(): void</text>
+<text x="1552" y="818" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ estornar(): void</text>
+<text x="1552" y="837" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ gerarRecibo(): String</text>
+<g filter="url(#sombra)">
+<rect x="130" y="960" width="350" height="214" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 130 994 L 130 968 Q 130 960 138 960 L 472 960 Q 480 960 480 968 L 480 994 Z" fill="#206F4A"/>
+<text x="305" y="973" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="305" y="987" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Avaliacao</text>
+<text x="142" y="1014" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="142" y="1033" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- pedidoId: String</text>
+<text x="142" y="1052" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- avaliadorId: String</text>
+<text x="142" y="1071" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- avaliadoId: String</text>
+<text x="142" y="1090" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- nota: Int (1–5)</text>
+<text x="142" y="1109" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- comentario: String</text>
+<line x1="130" y1="1122" x2="480" y2="1122" stroke="#D8DEE4" stroke-width="1"/>
+<text x="142" y="1142" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ registrar(): void</text>
+<text x="142" y="1161" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ calcularReputacao(): Double</text>
+<g filter="url(#sombra)">
+<rect x="600" y="960" width="350" height="214" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 600 994 L 600 968 Q 600 960 608 960 L 942 960 Q 950 960 950 968 L 950 994 Z" fill="#206F4A"/>
+<text x="775" y="973" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="775" y="987" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Notificacao</text>
+<text x="612" y="1014" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="612" y="1033" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- usuarioId: String</text>
+<text x="612" y="1052" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- tipo: TipoNotif</text>
+<text x="612" y="1071" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- titulo: String</text>
+<text x="612" y="1090" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- corpo: String</text>
+<text x="612" y="1109" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- lida: Boolean</text>
+<line x1="600" y1="1122" x2="950" y2="1122" stroke="#D8DEE4" stroke-width="1"/>
+<text x="612" y="1142" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ enviar(): void</text>
+<text x="612" y="1161" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ marcarLida(): void</text>
+<g filter="url(#sombra)">
+<rect x="1070" y="960" width="350" height="214" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 1070 994 L 1070 968 Q 1070 960 1078 960 L 1412 960 Q 1420 960 1420 968 L 1420 994 Z" fill="#206F4A"/>
+<text x="1245" y="973" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="1245" y="987" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Denuncia</text>
+<text x="1082" y="1014" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="1082" y="1033" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- denuncianteId: String</text>
+<text x="1082" y="1052" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- alvoId: String</text>
+<text x="1082" y="1071" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- motivo: String</text>
+<text x="1082" y="1090" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- status: StatusDenuncia</text>
+<text x="1082" y="1109" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- data: Timestamp</text>
+<line x1="1070" y1="1122" x2="1420" y2="1122" stroke="#D8DEE4" stroke-width="1"/>
+<text x="1082" y="1142" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ registrar(): void</text>
+<text x="1082" y="1161" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ revisar(): void</text>
+<g filter="url(#sombra)">
+<rect x="1540" y="960" width="350" height="214" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 1540 994 L 1540 968 Q 1540 960 1548 960 L 1882 960 Q 1890 960 1890 968 L 1890 994 Z" fill="#206F4A"/>
+<text x="1715" y="973" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="1715" y="987" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Consentimento</text>
+<text x="1552" y="1014" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="1552" y="1033" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- usuarioId: String</text>
+<text x="1552" y="1052" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- documento: TipoDocumento</text>
+<text x="1552" y="1071" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- versaoDocumento: String</text>
+<text x="1552" y="1090" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- concedido: Boolean</text>
+<text x="1552" y="1109" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- data: Timestamp</text>
+<line x1="1540" y1="1122" x2="1890" y2="1122" stroke="#D8DEE4" stroke-width="1"/>
+<text x="1552" y="1142" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ registrar(): void</text>
+<text x="1552" y="1161" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ revogar(): void</text>
+<g filter="url(#sombra)">
+<rect x="130" y="1300" width="350" height="157" rx="8" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.5"/>
+</g>
+<path d="M 130 1334 L 130 1308 Q 130 1300 138 1300 L 472 1300 Q 480 1300 480 1308 L 480 1334 Z" fill="#206F4A"/>
+<text x="305" y="1313" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9.5" fill="#E8F2ED" font-weight="400" text-anchor="middle" font-style="italic">«entity»</text>
+<text x="305" y="1327" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="middle">Favorito</text>
+<text x="142" y="1354" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- id: String</text>
+<text x="142" y="1373" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- usuarioId: String</text>
+<text x="142" y="1392" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- anuncioId: String</text>
+<text x="142" y="1411" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12" fill="#14181F" font-weight="400" text-anchor="start">- criadoEm: Timestamp</text>
+<line x1="130" y1="1424" x2="480" y2="1424" stroke="#D8DEE4" stroke-width="1"/>
+<text x="142" y="1444" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#206F4A" font-weight="400" text-anchor="start" font-style="italic">+ alternar(): void</text>
+<rect x="600" y="1300" width="200" height="99" rx="4" fill="#FFFFFF" stroke="#3F4A5A" stroke-width="1.3" stroke-dasharray="5 3"/>
+<path d="M 600 1334 L 600 1304 Q 600 1300 604 1300 L 796 1300 Q 800 1300 800 1304 L 800 1334 Z" fill="#3F4A5A"/>
+<text x="700" y="1314" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9" fill="#C9D2DC" font-weight="400" text-anchor="middle" font-style="italic">«enumeration»</text>
+<text x="700" y="1328" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">TipoUsuario</text>
+<text x="612" y="1352" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">INDIVIDUAL</text>
+<text x="612" y="1369" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">EMPRESA</text>
+<text x="612" y="1386" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">ADMIN</text>
+<rect x="830" y="1300" width="200" height="133" rx="4" fill="#FFFFFF" stroke="#3F4A5A" stroke-width="1.3" stroke-dasharray="5 3"/>
+<path d="M 830 1334 L 830 1304 Q 830 1300 834 1300 L 1026 1300 Q 1030 1300 1030 1304 L 1030 1334 Z" fill="#3F4A5A"/>
+<text x="930" y="1314" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9" fill="#C9D2DC" font-weight="400" text-anchor="middle" font-style="italic">«enumeration»</text>
+<text x="930" y="1328" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">StatusAnuncio</text>
+<text x="842" y="1352" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">ATIVO</text>
+<text x="842" y="1369" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">PAUSADO</text>
+<text x="842" y="1386" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">VENDIDO</text>
+<text x="842" y="1403" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">REMOVIDO</text>
+<text x="842" y="1420" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">RASCUNHO</text>
+<rect x="1070" y="1300" width="215" height="184" rx="4" fill="#FFFFFF" stroke="#3F4A5A" stroke-width="1.3" stroke-dasharray="5 3"/>
+<path d="M 1070 1334 L 1070 1304 Q 1070 1300 1074 1300 L 1281 1300 Q 1285 1300 1285 1304 L 1285 1334 Z" fill="#3F4A5A"/>
+<text x="1177.5" y="1314" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9" fill="#C9D2DC" font-weight="400" text-anchor="middle" font-style="italic">«enumeration»</text>
+<text x="1177.5" y="1328" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">StatusPedido</text>
+<text x="1082" y="1352" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">AGUARDANDO_PAGAMENTO</text>
+<text x="1082" y="1369" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">PAGO</text>
+<text x="1082" y="1386" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">ENVIADO</text>
+<text x="1082" y="1403" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">ENTREGUE</text>
+<text x="1082" y="1420" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">CONCLUIDO</text>
+<text x="1082" y="1437" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">EM_DISPUTA</text>
+<text x="1082" y="1454" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">ESTORNADO</text>
+<text x="1082" y="1471" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">CANCELADO</text>
+<rect x="1540" y="1300" width="200" height="99" rx="4" fill="#FFFFFF" stroke="#3F4A5A" stroke-width="1.3" stroke-dasharray="5 3"/>
+<path d="M 1540 1334 L 1540 1304 Q 1540 1300 1544 1300 L 1736 1300 Q 1740 1300 1740 1304 L 1740 1334 Z" fill="#3F4A5A"/>
+<text x="1640" y="1314" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="9" fill="#C9D2DC" font-weight="400" text-anchor="middle" font-style="italic">«enumeration»</text>
+<text x="1640" y="1328" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="12.5" fill="#FFFFFF" font-weight="700" text-anchor="middle">MetodoPagamento</text>
+<text x="1552" y="1352" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">PIX</text>
+<text x="1552" y="1369" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">CARTAO_CREDITO</text>
+<text x="1552" y="1386" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#14181F" font-weight="400" text-anchor="start">BOLETO</text>
+<rect x="94" y="1498" width="1772" height="46" rx="8" fill="#FFFFFF" stroke="#D8DEE4" stroke-width="1"/>
+<rect x="103" y="1512" width="26" height="18" rx="3" fill="#FFFFFF" stroke="#206F4A" stroke-width="1.4"/><rect x="103" y="1512" width="26" height="6" fill="#206F4A"/>
+<text x="142" y="1525.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#14181F" font-weight="400" text-anchor="start">Classe «entity»</text>
+<rect x="546" y="1512" width="26" height="18" rx="3" fill="#FFFFFF" stroke="#3F4A5A" stroke-width="1.2" stroke-dasharray="4 2"/>
+<text x="585" y="1525.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#14181F" font-weight="400" text-anchor="start">Enumeração</text>
+<line x1="989" y1="1521" x2="1015" y2="1521" stroke="#206F4A" stroke-width="1.5" marker-end="url(#setaVerde)"/>
+<text x="1028" y="1525.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#14181F" font-weight="400" text-anchor="start">Associação direta (com cardinalidade)</text>
+<line x1="1432" y1="1521" x2="1458" y2="1521" stroke="#206F4A" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#setaVerde)"/>
+<text x="1471" y="1525.5" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11.5" fill="#14181F" font-weight="400" text-anchor="start">Associação derivada</text>
+<text x="980" y="1574" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" fill="#5A6472" font-weight="400" text-anchor="middle" font-style="italic">Notação UML 2.5. Setas sólidas representam associações diretas com cardinalidade; tracejadas, associações derivadas. Pagamento substitui as entidades de carteira da versão 4.0.</text>
+</svg>
