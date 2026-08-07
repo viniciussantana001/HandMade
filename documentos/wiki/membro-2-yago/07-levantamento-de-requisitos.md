@@ -1,4 +1,35 @@
-# 3.1 Técnicas de levantamento de requisitos
+<html>
+<body>
+<!--StartFragment--><html><head></head><body><h1>3.1 Técnicas de levantamento de requisitos</h1>
+<p><strong>Responsável:</strong> Yago Smith da Silva</p>
+<p>O levantamento combinou quatro técnicas, complementadas por uma rodada de teste de usabilidade
+sobre o protótipo já construído. Nenhuma delas isolada seria suficiente: pesquisa bibliográfica
+não revela hábito de uso, questionário não explica motivo, entrevista não escala, análise de
+similares não diz o que o público local precisa, e nenhuma das quatro anteriores substitui
+observar o usuário real operando o sistema.</p>
+
+# | Técnica | Finalidade | Situação da evidência
+-- | -- | -- | --
+1 | Pesquisa bibliográfica | Fundamentar economia circular, marketplace, PNRS, LGPD e tecnologia | Arquivada
+2 | Análise de sistemas similares | Identificar lacuna funcional nos concorrentes | Arquivada
+3 | Questionário aplicado | Dimensionar hábito, ticket e disposição de uso | Declarada, não arquivada
+4 | Entrevista | Entender motivo e obstáculo operacional | Declarada, não arquivada
+5 | Teste de usabilidade (protótipo 4.0) | Validar a experiência de uso real, tela a tela, e localizar erro concreto de implementação | Arquivada
+
+
+<p>Requisitos completos nas páginas
+<a href="https://github.com/viniciussantana001/HandMade/wiki/11-requisitos-funcionais">Requisitos funcionais</a>
+e
+<a href="https://github.com/viniciussantana001/HandMade/wiki/12-requisitos-nao-funcionais">Requisitos não funcionais</a>.</p>
+<hr>
+<p><strong>Nota de método.</strong> Declarar o que falta é parte do levantamento, não uma falha dele. Apresentar
+87 respostas como evidência publicada quando o material ainda não existe na wiki seria o erro mais
+grave que esta página poderia cometer, e ele é evitado deliberadamente — o mesmo critério aplicado
+na página
+<a href="https://github.com/viniciussantana001/HandMade/wiki/18-testes-e-qualidade">Testes e qualidade</a>
+para as métricas de usabilidade.</p></body></html><!--EndFragment-->
+</body>
+</html># 3.1 Técnicas de levantamento de requisitos
 
 **Responsável:** Yago Smith da Silva
 
@@ -21,7 +52,7 @@ A coluna de situação é o ponto central desta página e está detalhada na se�
 ## 1. Pesquisa bibliográfica
 
 Base teórica do trabalho, com as fontes registradas na página
-[Referências](../membro-4-thomaz/21-referencias.md).
+[[Referências](https://github.com/viniciussantana001/HandMade/wiki/21-referencias)](https://github.com/viniciussantana001/HandMade/wiki/21-referencias).
 
 | Tema | Fonte principal | O que sustentou no projeto |
 |---|---|---|
@@ -39,8 +70,10 @@ Observação direta dos serviços concorrentes, com registro do que existe e do 
 foi: procurar um material específico ("tábua de madeira usada", "sobra de azulejo") em cada
 plataforma e registrar quantos passos e quantos resultados irrelevantes a busca produz.
 
-Resultado consolidado em [Concorrentes](08-concorrentes.md). As lacunas encontradas viraram
-requisito direto — taxonomia de material, filtro por condição e filtro por distância.
+Resultado consolidado na página
+[[Concorrentes](https://github.com/viniciussantana001/HandMade/wiki/08-concorrentes)](https://github.com/viniciussantana001/HandMade/wiki/08-concorrentes). As lacunas
+encontradas viraram requisito direto — taxonomia de material, filtro por condição e filtro por
+distância.
 
 ## 3. Questionário aplicado
 
@@ -57,18 +90,18 @@ requisito direto — taxonomia de material, filtro por condição e filtro por d
 
 ### Dados declarados a partir do questionário
 
-Estes três valores são usados como premissa no plano de negócio
-(`prototipo/src/lib/business.ts`), com a fonte anotada no próprio código:
+Estes três valores são usados como premissa no plano de negócio, com a fonte anotada junto ao
+próprio cálculo:
 
-| Premissa | Valor | Fonte anotada no código |
+| Premissa | Valor | Fonte anotada |
 |---|---|---|
 | Ticket médio por transação | R$ 420,00 | Média dos 87 respondentes |
 | Vendedores que são pessoa jurídica | 18% | 16 dos 87 respondentes atuam como empresa |
 | Anúncios ativos por vendedor | 3,5 | Mediana de quem já revende sobra de obra |
 
 O restante das premissas do plano de negócio vem de referência de mercado, não do questionário, e
-está identificado como tal no mesmo arquivo. A separação é deliberada: premissa de pesquisa e
-premissa de benchmark não têm o mesmo peso probatório.
+está identificado como tal junto ao próprio cálculo. A separação é deliberada: premissa de
+pesquisa e premissa de benchmark não têm o mesmo peso probatório.
 
 ## 4. Entrevista
 
@@ -82,13 +115,13 @@ premissa de benchmark não têm o mesmo peso probatório.
 
 ### O que a entrevista produziu no projeto
 
-O relato dos gestores fundamentou a persona **Dona Marlene Aparecida**, a catadora cooperada, em
-`documentos/qualidade/personas.md`. Dela derivaram decisões verificáveis no protótipo:
+O relato dos gestores fundamentou a persona **Dona Marlene Aparecida**, a catadora cooperada. Dela
+derivaram decisões verificáveis no protótipo:
 
 | Achado da entrevista | Decisão de projeto | Verificação |
 |---|---|---|
 | A cooperativa vende a atravessador por preço imposto | Venda direta sem intermediário | Fluxo de publicação (RF-07) |
-| Aparelho de entrada, internet intermitente | Fotos embutidas, protótipo abre sem internet | 12 testes em `images.test.ts` |
+| Aparelho de entrada, internet intermitente | Fotos embutidas, protótipo abre sem internet | Testes automatizados de imagem |
 | Texto pequeno e contraste baixo dificultam a leitura | Paleta resolvida por cálculo para WCAG 2.2 AA | 48 telas, 0 falha |
 | Erro sem explicação encerra a tentativa | Mensagem em linguagem comum com próximo passo | Heurística 9 |
 
@@ -97,7 +130,7 @@ O relato dos gestores fundamentou a persona **Dona Marlene Aparecida**, a catado
 Diferente das quatro técnicas anteriores, que levantam requisito antes de o sistema existir, esta
 rodada foi aplicada **depois** de o protótipo estar funcional, com o objetivo de validar se o que
 foi construído correspondia ao que a pesquisa indicou. O instrumento e as respostas brutas estão
-arquivados neste repositório — é a única das cinco técnicas com esse status hoje.
+arquivados — é a única das cinco técnicas com esse status hoje.
 
 > **Nota de escopo.** Este formulário foi respondido sobre o **protótipo 4.0**. Os erros
 > constatados e as melhorias indicadas pelos respondentes foram tratados como requisito de
@@ -189,30 +222,9 @@ específico e recorrente identificado nesta rodada.
 
 ## 6. Situação das evidências — declaração explícita
 
-**O que existe no repositório:** a bibliografia, a análise de concorrentes, as personas
-construídas a partir da pesquisa, as premissas numéricas com a fonte anotada no código, e o
-formulário com as respostas brutas do teste de usabilidade do protótipo 4.0.
-
-**O que não existe no repositório:** o formulário do questionário de 87 respostas, a tabulação
-completa, os gráficos de resultado e a transcrição das duas entrevistas.
-
-Ou seja: os **resultados** da pesquisa estão incorporados ao projeto e rastreáveis até o código
-que os usa, mas os **instrumentos e os dados primários** do questionário e da entrevista não foram
-arquivados aqui. Enquanto isso não for resolvido, a formulação correta é "premissa declarada a
-partir de pesquisa aplicada", e não "dado comprovado".
-
-### O que precisa ser anexado antes da entrega final
-
-| Item | Destino no repositório |
-|---|---|
-| Formulário do questionário (PDF ou link) | `documentos/qualidade/evidencias/questionario-instrumento.pdf` |
-| Tabulação das 87 respostas (planilha) | `documentos/qualidade/evidencias/questionario-respostas.csv` |
-| Gráficos de resultado por bloco | `documentos/wiki/membro-2-yago/imagens/` |
-| Roteiro da entrevista | `documentos/qualidade/evidencias/entrevista-roteiro.md` |
-| Síntese das duas entrevistas | `documentos/qualidade/evidencias/entrevista-sintese.md` |
-
-Este é o item de maior prioridade da lista de pendências do projeto. Sem ele, três premissas do
-plano de negócio e uma persona ficam sem lastro documental verificável.
+**O que está disponível:** a bibliografia, a análise de concorrentes, as personas construídas
+a partir da pesquisa, as premissas numéricas com a fonte anotada, e o formulário com as respostas
+brutas do teste de usabilidade do protótipo 4.0.
 
 ## 7. Da técnica ao requisito
 
@@ -232,13 +244,16 @@ Rastreabilidade entre origem e requisito — permite auditar de onde veio cada e
 | Teste de usabilidade — ausência de edição de anúncio (protótipo 4.0) | Edição de anúncio publicado, corrigida no protótipo 5.0 |
 | Teste de usabilidade — criação de anúncio como etapa mais difícil (protótipo 4.0) | Revisão do fluxo de criação de anúncio, incorporada no protótipo 5.0 |
 
-Requisitos completos em
-[Requisitos funcionais](../membro-3-nathan/11-requisitos-funcionais.md) e
-[Requisitos não funcionais](../membro-3-nathan/12-requisitos-nao-funcionais.md).
+Requisitos completos nas páginas
+[[Requisitos funcionais](https://github.com/viniciussantana001/HandMade/wiki/11-requisitos-funcionais)](https://github.com/viniciussantana001/HandMade/wiki/11-requisitos-funcionais)
+e
+[[Requisitos não funcionais](https://github.com/viniciussantana001/HandMade/wiki/12-requisitos-nao-funcionais)](https://github.com/viniciussantana001/HandMade/wiki/12-requisitos-nao-funcionais).
 
 ---
 
 **Nota de método.** Declarar o que falta é parte do levantamento, não uma falha dele. Apresentar
-87 respostas como evidência arquivada quando o arquivo não existe seria o erro mais grave que esta
-página poderia cometer, e ele é evitado deliberadamente — o mesmo critério aplicado na página
-[Testes e qualidade](../membro-4-thomaz/18-testes-e-qualidade.md) para as métricas de usabilidade.
+87 respostas como evidência publicada quando o material ainda não existe na wiki seria o erro mais
+grave que esta página poderia cometer, e ele é evitado deliberadamente — o mesmo critério aplicado
+na página
+[[Testes e qualidade](https://github.com/viniciussantana001/HandMade/wiki/18-testes-e-qualidade)](https://github.com/viniciussantana001/HandMade/wiki/18-testes-e-qualidade)
+para as métricas de usabilidade.
